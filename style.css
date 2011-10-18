@@ -1,0 +1,11 @@
+body { background: #c6deeb; }
+::selection{ background:#fffa7e; color:#222; }
+::-moz-selection{ background:#fffa7e; color:#222; }
+#container { margin: 100px auto; width: 600px; text-align: center; }
+h1 { font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, sans-serif; font-size: 32px; color: #181e13; }
+a { text-decoration: none; font-size: 15px; color: #0f3a50;}
+span { font-size: 18px; color: #070e13; line-height: 33px; font-style:italic; }
+	#jq_count_up span{ font-size: 22px; color: #21485e; }
+	#links {margin: 50px auto; border-top: 1px solid #ccc; width: 300px;}
+		#links li { list-style-type: none; float: left; padding: 0 10px 0 10px; }
+		#links li:hover { background:#fffa7e; } 
