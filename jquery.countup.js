@@ -125,7 +125,6 @@
 				timeDiff.year = 0; 
 				timeDiff.month = 0;
 				if(_defaults['format'] == 'seconds') {
-					console.log(timeDiff.day);
 					timeDiff.seconds = (timeDiff.day*86400) + (timeDiff.hour*3600) + (timeDiff.minute*60) + timeDiff.seconds;
 					timeDiff.day = 0;
 					timeDiff.hour = 0;
