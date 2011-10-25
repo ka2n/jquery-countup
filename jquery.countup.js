@@ -2,7 +2,7 @@
 	http://ogulcanorhan.com
   	CountUp for jQuery v1.4+
   	Licensed under the GPL (http://www.gnu.org/copyleft/gpl.html)
-  	Written by Ogulcan Orhan (mail@ogulcan.org) October 2011
+  	Developed by Ogulcan Orhan (mail@ogulcan.org) October 2011
  
 	Please do not remove these copyright.
   
