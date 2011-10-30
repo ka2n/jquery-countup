@@ -29,8 +29,8 @@
 	
 	var _defaults = { 'sinceDate' : '17/10/2007-19:37:25', 'expiryDate' : 'now', 'lang': 'tr', 'format': 'seconds' , 'div_id' : '#jq_count_up', 'class_prefix' : '', 'seperator': ',', 'write_zero':'false'};
 	var _timeStructure = { 'year': '' ,'month': '' ,'day': '' ,'hour': '' ,'minute': '','seconds': ''};
-	var _monthDayStructure = { 1: 31, 2:28, 3:31, 4:30, 5:31, 6:31, 7:30, 8:31, 9:30, 10:31, 11:30, 12:30 };	
-	var _lang = { 'en' : { 'year': 'year', 'month': 'month', 'day': 'day', 'hour': 'hour', 'minute': 'minute', 'seconds': 'seconds',  },
+	var _monthDayStructure = { 1: 31, 2:28, 3:31, 4:30, 5:31, 6:31, 7:30, 8:31, 9:30, 10:31, 11:30, 12:31 };	
+	var _lang = { 'en' : { 'year': 'years', 'month': 'months', 'day': 'days', 'hour': 'hours', 'minute': 'minutes', 'seconds': 'seconds',  },
 				  'tr' : { 'year': 'yıl', 'month': 'ay', 'day': 'gün', 'hour': 'saat', 'minute': 'dakika', 'seconds': 'saniye' },
 				  'es' : { 'year': 'año' ,'month': 'mes', 'day': 'día' ,'hour': 'horas' ,'minute': 'minuto','seconds': 'segundo'	},
 				  'de' : { 'year': 'jahr' ,'month': 'monat' ,'day': 'tag' ,'hour': 'stunde' ,'minute': 'minute','seconds': 'sekunden' }
@@ -155,8 +155,7 @@
 						}
 					}
 				}
-			}
-			
+			}			
 			methods.print(time);	
 		},
 		
