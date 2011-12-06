@@ -40,11 +40,11 @@
 	var _timeStructure = { 'year': '', 'month': '', 'day': '', 'hour': '', 'minute': '', 'seconds': '' };
 	var _monthDayStructure = { 1: 31, 2:28, 3:31, 4:30, 5:31, 6:31, 7:30, 8:31, 9:30, 10:31, 11:30, 12:31 };	
 	var _lang = { 
-			'en' : { 'year': 'years', 'month': 'months', 'day': 'days', 'hour': 'hours', 'minute': 'minutes', 'seconds': 'seconds',  },
-			'tr' : { 'year': 'yıl', 'month': 'ay', 'day': 'gün', 'hour': 'saat', 'minute': 'dakika', 'seconds': 'saniye' },
-			'es' : { 'year': 'año' ,'month': 'mes', 'day': 'día' ,'hour': 'horas' ,'minute': 'minuto','seconds': 'segundo'	},
-			'de' : { 'year': 'jahr' ,'month': 'monat' ,'day': 'tag' ,'hour': 'stunde' ,'minute': 'minute','seconds': 'sekunden' }
-		    };
+		'en' : { 'year': 'years', 'month': 'months', 'day': 'days', 'hour': 'hours', 'minute': 'minutes', 'seconds': 'seconds',  },
+		'tr' : { 'year': 'yıl', 'month': 'ay', 'day': 'gün', 'hour': 'saat', 'minute': 'dakika', 'seconds': 'saniye' },
+		'es' : { 'year': 'año' ,'month': 'mes', 'day': 'día' ,'hour': 'horas' ,'minute': 'minuto','seconds': 'segundo'	},
+		'de' : { 'year': 'jahr' ,'month': 'monat' ,'day': 'tag' ,'hour': 'stunde' ,'minute': 'minute','seconds': 'sekunden' }
+    };
 		    
 	var methods = {
 		
@@ -57,7 +57,6 @@
 			var _timeDifference = methods.difference(_startDate, _endDate);
 			
 			_timeDifference = methods.formatted(_timeDifference, newOptions);
-			
 			setInterval(function() { methods.update(_timeDifference, newOptions); }, 999);	
 		},
 		
@@ -73,6 +72,7 @@
 			//month difference
 			var eMonthString = parseInt(String(end.day)+String(end.hour)+String(end.minute));
 			var sMonthString = parseInt(String(start.day)+String(start.hour)+String(start.minute));	
+			
 			if(end.month < start.month) {
 				timeDiff.month = 12 - Math.abs(end.month - start.month);
 				if(eMonthString < sMonthString) timeDiff.month--;
@@ -86,7 +86,8 @@
 			
 			//day difference
 			var eDayString = parseInt(String(end.hour)+String(end.minute)+String(end.seconds), 10);
-			var sDayString = parseInt(String(start.hour)+String(start.minute)+String(start.seconds), 10);				
+			var sDayString = parseInt(String(start.hour)+String(start.minute)+String(start.seconds), 10);
+			
 			if(end.day < start.day) {
 				timeDiff.day = _monthDayStructure[parseInt(start.month, 10)] - Math.abs(end.day - start.day);
 				if(eDayString < sDayString ) timeDiff.day--;
@@ -101,6 +102,7 @@
 			//hour difference
 			var eHourString = parseInt(String(end.minute)+String(end.seconds) ,10);
 			var sHourString = parseInt(String(start.minute)+String(start.seconds),10);
+			
 			if(end.hour < start.hour) {
 				timeDiff.hour = 24 - Math.abs(end.hour - start.hour);
 				if(eHourString < sDayString) timeDiff.hour--;
