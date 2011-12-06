@@ -166,7 +166,7 @@
 					if ( time.hour < 23 ) time.hour++;
 					else {
 						time.hour = 0;
-						if ( time.day < _monthDayStructure[_defaults.expiryDate.getMonth()] || newOptions['format'] == 'day' ) time.day++;
+						if ( time.day < _monthDayStructure[newOptions.expiryDate.getMonth()] || newOptions['format'] == 'day' ) time.day++;
 						else {
 							time.day = 0;
 							if ( time.month < 12 ) time.month++;
